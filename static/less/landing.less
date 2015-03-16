@@ -1,0 +1,380 @@
+@import "3L";
+@import "arrows";
+.reset();
+
+@blue-dark: #202C51;  // Dark blue
+@blue-medium: #4B7EB5;  // Faded Blue 
+@blue-light: #68C6DF;  // Turquoise blue
+@grey: #3F3F3F;  // grey
+
+html
+    {
+    font-size: 62.5%;
+    }
+
+body 
+    {
+    font-family: "DIN Round Offc Pro";
+    font-weight: 300;
+    }
+
+nav
+    {
+    position: absolute;
+    top: 0px;
+    height: 80px;
+    border-bottom: 1px solid rgba(255,255,255,.4);
+    width: 100%;
+    ul { text-align: right; }
+    ul li
+        {
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10pt;
+        a
+            {
+            padding: 0px 20px;
+            line-height: 80px;
+            display: inline-block;
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+            &:hover
+                {
+                background: rgba(255,255,255,.4);
+                color: @blue-dark;
+                }
+            }
+        }
+    ul li.logo
+        {
+        background: url(../images/logo-white.png) center center no-repeat;
+        background-size: 78px 20px;
+        width: 80px;
+        position: absolute;
+        left: 20px;
+        height: 80px;
+        color: transparent; 
+        text-indent: -1000pt;
+        }
+    }
+
+
+/* *********************************************
+ * HERO
+ ********************************************* */
+
+
+#hero
+    {
+    background: url(../images/bg.jpg) center center no-repeat @blue-dark;
+    background-size: cover;
+    height: 100vh;
+    .display-flex();
+    .justify-content(center);
+    .align-items(center);
+    h1
+        {
+        font-size: 36pt;
+        font-weight: 500;
+        line-height: 150%;
+        text-align: center;
+        color: white;
+        width: 100%;
+        }
+    div.bottom
+        {
+        // position: absolute;
+        // bottom: 0px;
+        background:rgb(0,0,0);
+        // left: 0px;
+        height: 80px;
+        width: 100%;
+        }
+    a.cta
+        {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        #arrow > .bottom(10px, @blue-light);
+        background: @blue-light;
+        padding: 16px 20px;
+        font-weight: 500;
+        .box-shadow(0px 4px 4px rgba(0,0,0,.1));
+        .border-radius(4px);
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        width: 300px;
+        text-align: center;
+        .border-box-sizing;
+        margin-left: -150px;
+        font-size: 12pt;
+        .transition(all ease .3s);
+        &:hover {
+            bottom: 45px;
+            .box-shadow(0px 9px 12px rgba(0,0,0,.2));
+        }
+        }
+    }
+
+/* *********************************************
+ * SERVICES
+ ********************************************* */
+
+#services
+    {
+    position: relative;
+    .knot
+        {
+        background: url(../images/knot-blue.png) center center no-repeat white;
+        background-size: 75px 79.5px;
+        width: 140px;
+        height: 140px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -70px 0 0 -70px ;
+        .border-radius(50%);
+        }
+    .row
+        {
+        height: 50vh;
+        position: relative;
+        .photo, .content
+            {
+            height: 50vh;
+            width: 50%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            }
+        .photo
+            {
+            background: url(../images/formulas.png) center center no-repeat @grey;
+            background-size: cover;
+            }
+        &.data .content { left: 50%; }
+        &.ux .photo { left: 50%; background-image: url(../images/wireframes.jpg); }
+        .content
+            {
+            .display-flex();
+            .justify-content(left);
+            .align-items(center);
+            .inner  
+                {
+                padding: 60px;
+                .border-box-sizing;
+                width: 100%;
+                }
+            h2
+                {
+                color: @blue-dark;
+                font-size: 32pt;
+                }
+            p
+                {
+                span
+                    {
+                    display: inline-block;
+                    max-width: 420px;
+                    }
+                position: relative;
+                right: 0px;
+                font-size: 16pt;
+                color: @grey;
+                margin: 30px 0 50px 0;
+                line-height: 150%;
+                }
+            a.cta
+                {
+                border: 1px solid @blue-dark;
+                .border-radius(2px);
+                padding: 8px 12px;
+                text-decoration: none;
+                color: @blue-dark;
+                font-size: 16pt;
+                white-space: nowrap;
+                .transition(all .3s ease);
+                &:hover
+                    {
+                    background: @blue-dark;
+                    color: white;
+                    }
+                }
+            }
+        &.ux .content
+            {
+            text-align: right;
+            .justify-content(right);
+            }
+        }
+    }
+
+
+/* *********************************************
+ * COMPANY
+ ********************************************* */
+
+.container
+    {
+    max-width: 700px;
+    margin: 0px auto;
+    padding: 0px 20px;
+    .border-box-sizing;
+    }
+
+div#company
+    {
+    background: @blue-light;
+    padding: 40px 0;
+    text-align: center;
+    p
+        {
+        color: @blue-dark;
+        font-size: 20pt;
+        line-height: 150%;
+        }
+    p.knot63
+        {
+        margin: 40px 0 30px 0;
+        color: transparent;
+        text-indent: -1000pt;
+        background: url(../images/logo-white.png) center center no-repeat;
+        background-size: 300px 76px;
+        height: 76px;
+        }
+    a.cta
+        {
+        margin: 40px 0 0 0;
+        display: inline-block;
+        border: 2px solid white;
+        .border-radius(2px);
+        padding: 16px 20px;
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        font-size: 16pt;
+        white-space: nowrap;
+        .transition(all .3s ease);
+        &:hover
+            {
+            background: white;
+            color: @blue-light;
+            }
+        }
+    }
+
+
+/* *********************************************
+ * CAREERS
+ ********************************************* */
+
+blockquote
+    {
+    margin: 40px 0;
+    text-align: center;
+    p
+        {
+        color: @blue-dark;
+        font-size: 20pt;
+        line-height: 150%;
+        }
+    p.author
+        {
+        font-size: 16pt;
+        color: @blue-medium;
+        margin-top: 4px;
+        }
+    }
+
+
+/* *********************************************
+ * FOOTER
+ ********************************************* */
+
+#copyright
+    {
+    font-size: 10pt;
+    color: #aaa;
+    text-align: center;
+    margin: 20px 0;
+    }
+
+
+
+/* *********************************************
+ * SMALLER DESKTOP
+ ********************************************* */
+
+@media screen and (max-width: 1024px) {
+    div#company
+        {
+        p, a.cta { font-size: 16pt; }
+        p.knot63 { background-size: 200px 50px; margin: 30px 0 20px 0; }
+        } 
+    div#services .row .content 
+        {
+        .inner { padding: 40px; }
+
+        h2 {font-size: 20pt}
+        p, a.cta {font-size: 12pt;}
+        p span { max-width: 340px; }
+        p { margin: 20px 0 40px 0; }
+        }
+
+}
+
+@media screen and (max-width: 640px) {
+    div#hero h1
+        {
+        font-size: 28pt;
+        }
+    .container
+        {
+        margin: 0 20px;
+        }
+    div#services .knot
+        {
+        width: 100px;
+        height: 100px;
+        margin: -50px 0 0 -50px;
+        background-size: 50px 53px;
+        }
+    div#services .row, div#services .row.ux, div#services .row.data
+        {
+        .photo, .content  
+            {
+            width: 100%;
+            left: 0px;
+            }
+        .content
+            {
+            text-align: center;
+            h2  {color: @blue-light;}
+            p  {color: white;}
+            a.cta
+                {
+                color: @blue-light;
+                border-color: @blue-light;
+                &:hover
+                    {
+                    background: fade(@blue-light, 80);
+                    color: white;
+                    }
+                }
+            background: rgba(0,0,0, .5);
+            }
+        }
+    nav
+        {
+        border-bottom: none;
+        ul li { display: none; }
+        ul li:first-child 
+            {
+            display: block;
+            width: 100%;
+            left: 0px;
+            }
+        }
+}
