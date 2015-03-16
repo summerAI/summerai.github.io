@@ -5,14 +5,81 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="shortcut icon" href="{% static 'images/favicon.png'  %}">
+  <link rel="stylesheet" href="{% static 'css/landing.css'  %}">
   <title>Knot 6-3</title>
   </head>
 
 <body>
+  <nav>
+    <ul>
+      <li class="logo">Knot 6-3</li>
+      <li><a href="#services" title="Services">Services</a></li>
+      <li><a href="#company" title="Company">Company</a></li>
+      <li><a href="#careers" title="Careers">Careers</a></li>
+      <li><a href="#contact" title="Contact">Contact</a></li>
+    </ul>
+  </nav>  
   <main>
-    <h1>Knot 6<sub>3</sub></h1>
+    <div id="hero">
+      <h1>User Experience, <br>meet Data Science.</h1>
+      <a href="#services" class="cta">We’re currently available for work!</a>
+    </div>
+
+    <div id="services">
+      <div class="row data">
+        <div class="photo"></div>
+          <div class="content">
+            <div class="inner">
+            <h2>Data Science</h2>
+            <p><span>We’ve analysed brain scans, predicted
+               start-up growth rates, written data science
+               curricula and tought computers to play jazz.</span></p>
+            <div class="bottom">
+              <a href="mailto:hello@knot63.com" class="cta">We can solve your problem, too.</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row ux">
+        <div class="photo"></div>
+        <div class="content">
+          <div class="inner">
+            <h2>User Experience</h2>
+            <p><span>We’ve built procuts used by millions of
+               people. Our user research actually is rocket
+               science, so that using your product won’t be.</span></p>
+            <a href="mailto:hello@knot63.com" class="cta">Delivering Delight. Free Shipping.</a>
+          </div>
+        </div>
+      </div>
+      <div class="knot"></div>
+    </div>
+
+    <div id="company">
+      <div class="container">
+        <p>We believe all improvement starts with asking the right questions. That’s why we created</p>
+        <p class="knot63">Knot 6-3</p>
+        <p>We work as a natural extension to your team, bringing in our combined  backgrounds in quantitative science and user experience design to fill those gaps you can’t fill (yet).</p>
+        <a href="mailto:hello@knot63.com" class="cta">Come work with us.</a>
+      </div>
+    </div>
+
+    <div id="careers">
+      <div class="container">
+        <blockquote>
+          <p>“Data! Data! Data! <br>I can’t make bricks without clay!”</p>
+          <p class="author">( Sir Arthur Conan Doyle )</p>
+        </blockquote>
+      </div>
+    </div>
+
+    <div id="copyright">
+      <div class="container">
+        Copyright &copy; 2015 Knot 6-3 LLC. All rights reserved.
+      </div>
+    </div>
+
   </main>
 </body>
 </html>
