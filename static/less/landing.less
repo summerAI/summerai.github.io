@@ -7,6 +7,9 @@
 @blue-light: #68C6DF;  // Turquoise blue
 @grey: #3F3F3F;  // grey
 
+.regular(@font-size: @m) { font-size: @font-size; font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif; font-weight: 300; }
+.medium(@font-size: @m)  { font-size: @font-size; font-family: "DINRound-500", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif; font-weight: 500; }
+
 html
     {
     font-size: 62.5%;
@@ -15,7 +18,7 @@ html
 body 
     {
     font-family: "DIN Round Offc Pro";
-    font-weight: 300;
+    .regular(10pt);
     }
 
 nav
@@ -30,7 +33,7 @@ nav
         {
         text-decoration: none;
         display: inline-block;
-        font-size: 10pt;
+        .regular(10pt);
         a
             {
             padding: 0px 20px;
@@ -75,8 +78,7 @@ nav
     .align-items(center);
     h1
         {
-        font-size: 36pt;
-        font-weight: 500;
+        .medium(26pt);
         line-height: 150%;
         text-align: center;
         color: white;
@@ -99,7 +101,6 @@ nav
         #arrow > .bottom(10px, @blue-light);
         background: @blue-light;
         padding: 16px 20px;
-        font-weight: 500;
         .box-shadow(0px 4px 4px rgba(0,0,0,.1));
         .border-radius(4px);
         position: absolute;
@@ -109,7 +110,7 @@ nav
         text-align: center;
         .border-box-sizing;
         margin-left: -150px;
-        font-size: 12pt;
+        .medium(12pt);
         .transition(all ease .3s);
         &:hover {
             bottom: 45px;
@@ -170,7 +171,7 @@ nav
             h2
                 {
                 color: @blue-dark;
-                font-size: 32pt;
+                .regular(32pt);
                 }
             p
                 {
@@ -181,7 +182,7 @@ nav
                     }
                 position: relative;
                 right: 0px;
-                font-size: 16pt;
+                .regular(16pt);
                 color: @grey;
                 margin: 30px 0 50px 0;
                 line-height: 150%;
@@ -193,7 +194,7 @@ nav
                 padding: 8px 12px;
                 text-decoration: none;
                 color: @blue-dark;
-                font-size: 16pt;
+                .regular(16pt);
                 white-space: nowrap;
                 .transition(all .3s ease);
                 &:hover
@@ -232,7 +233,7 @@ div#company
     p
         {
         color: @blue-dark;
-        font-size: 20pt;
+        .regular(20pt);
         line-height: 150%;
         }
     p.knot63
@@ -253,8 +254,7 @@ div#company
         padding: 16px 20px;
         text-decoration: none;
         color: white;
-        font-weight: 500;
-        font-size: 16pt;
+        .medium(16pt);
         white-space: nowrap;
         .transition(all .3s ease);
         &:hover
@@ -277,12 +277,12 @@ blockquote
     p
         {
         color: @blue-dark;
-        font-size: 20pt;
+        .regular(20pt);
         line-height: 150%;
         }
     p.author
         {
-        font-size: 16pt;
+        .regular(16pt);
         color: @blue-medium;
         margin-top: 4px;
         }
@@ -295,7 +295,7 @@ blockquote
 
 #copyright
     {
-    font-size: 10pt;
+    .regular(10pt);
     color: #aaa;
     text-align: center;
     margin: 20px 0;
@@ -322,15 +322,15 @@ body.popup
 @media screen and (max-width: 1024px) {
     div#company
         {
-        p, a.cta { font-size: 16pt; }
+        p, a.cta { .regular(16pt; )}
         p.knot63 { background-size: 200px 50px; margin: 30px 0 20px 0; }
         } 
     div#services .row .content 
         {
         .inner { padding: 40px; }
 
-        h2 {font-size: 20pt}
-        p, a.cta {font-size: 12pt;}
+        h2 {.regular(20pt)}
+        p, a.cta {.regular(12pt;)}
         p span { max-width: 340px; }
         p { margin: 20px 0 40px 0; }
         }
@@ -346,7 +346,7 @@ body.popup
 @media screen and (max-width: 640px) {
     div#hero h1
         {
-        font-size: 28pt;
+        .regular(28pt);
         }
     .container
         {
