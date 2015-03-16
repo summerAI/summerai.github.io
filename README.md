@@ -26,5 +26,5 @@ git push
 
 ```bash
 git checkout master
-make  # Pulls from dev, builds and auto-pushes
+make  # Goes to dev branch, builds, copies build to master and auto-pushes
 ```
