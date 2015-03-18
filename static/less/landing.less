@@ -1,5 +1,7 @@
 @import "3L";
 @import "arrows";
+@import "retina";
+
 .reset();
 
 @blue-dark: #202C51;  // Dark blue
@@ -35,6 +37,12 @@ body
     {
     font-family: "DIN Round Offc Pro";
     .regular(10pt);
+    }
+
+sub
+    {
+    vertical-align: sub;
+    font-size: 80%;
     }
 
 nav
@@ -286,6 +294,108 @@ div#company
  * CAREERS
  ********************************************* */
 
+#careers h2 
+    {
+    color: @blue-dark;
+    .regular(32pt);
+    text-align: center;
+    margin: 40px 0;
+    }
+
+#benefits 
+    {
+    .columns(2);
+    .column-gap(20px);
+    margin: 40px 0;
+    }
+
+#benefits li
+    {
+    position: relative;
+    margin-bottom: 20px;
+    color: lighten(@grey, 10);
+    -webkit-column-break-inside: avoid;
+              page-break-inside: avoid;
+                   break-inside: avoid;
+    &:before
+        {
+        display: block;
+        content: "";
+        .sprite("../images/benefits.png", 64px, 3, 3);
+        position: absolute;
+        // top: 50%;
+        // margin-top: -32px;
+        left: 0;
+        }
+    &.work:before { .sprite(2,0); }
+    &.health:before { .sprite(0,0); }
+    &.salary:before { .sprite(1,0); }
+    &.vacation:before { .sprite(0,1); }
+    &.sf:before { .sprite(2,1); }
+    &.equipment:before { .sprite(1,1); }
+    &.ego:before { .sprite(2,0); }
+    &.power:before { .sprite(1,2); }
+    padding-left: 80px;
+    .regular(14pt);
+    line-height: 18pt;
+    strong { .medium(14pt); color: @grey; }
+    min-height: 64px;
+    }
+
+    #jobs 
+    {
+    .columns(3);
+    .column-gap(20px);
+    margin: 40px 0 20px 0;
+    }
+
+    #jobs li
+        {
+    -webkit-column-break-inside: avoid;
+              page-break-inside: avoid;
+                   break-inside: avoid;
+        margin-bottom: 20px;
+        h3
+            {
+            color: @blue-medium;
+            .medium(16pt);
+            margin-bottom: 20px;
+            }
+        p
+            {
+            margin-bottom: 10px;
+            .regular(14pt);
+            line-height: 18pt;
+            color: @grey;
+            }
+        p:last-child { text-align: center; }
+        a.apply
+            {
+            border: 1px solid @blue-dark;
+            .border-radius(2px);
+            padding: 8px 16px 6px 16px;
+            // margin: 10px 0;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            color: @blue-dark;
+            .regular(14pt);
+            white-space: nowrap;
+            .transition(all .3s ease);
+            &:hover
+                {
+                background: @blue-dark;
+                color: white;
+                }
+            &.upper
+                {
+                float: right;
+                margin: -5px 0 0 0;
+                display: none;
+                }
+            }
+        }
+
 blockquote
     {
     margin: 40px 0;
@@ -351,7 +461,10 @@ body.popup
         p span { max-width: 340px; }
         p { margin: 20px 0 40px 0; }
         }
-
+    #careers h2 {.regular(20pt)}
+    #jobs li h3 { .medium(14pt); }
+    #jobs li a.apply { .regular(12pt); }
+    #benefits li, #benefits li strong, #jobs li p { font-size: 12pt; line-height: 16pt; }
 }
 
 
@@ -422,4 +535,10 @@ body.popup
             left: 0px;
             }
         }
+    #benefits, #jobs
+        {
+        .columns(1);
+        }
+    #jobs li a.apply {display: none; }
+    #jobs li a.apply.upper {display: block; }
 }
