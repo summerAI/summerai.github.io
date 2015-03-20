@@ -9,6 +9,6 @@ def postBuild(site):
         dest = "%s.css" % root_name.replace("/less/", "/css/")
         try:
             print "compiling", dest
-            subprocess.check_call(['lessc', '--compress', src, dest])
+            subprocess.check_call(['lessc', src, dest])
         except subprocess.CalledProcessError:
             print "lessc returned a non-zero exit status, please check your less syntax"
