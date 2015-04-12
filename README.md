@@ -3,8 +3,9 @@
 ### Setup :hatching_chick: 
  
 ```bash
+brew install npm
+npm install less -g
 pip install cactus
-gem install less -g
 ```
 
 ### Muddle :coffee: 
