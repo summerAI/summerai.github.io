@@ -125,30 +125,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-@font-face {
-  font-family: 'DINRound-300';
-  src: url("../fonts/DINRoundWebPro-Light.woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'DINRound-500';
-  src: url("../fonts/DINRoundWebPro-Medium.woff");
-  font-weight: normal;
-  font-style: normal;
-}
 html {
   font-size: 62.5%;
 }
 body {
   font-family: "DIN Round Offc Pro";
-  font-size: 10pt;
-  font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
   font-weight: 300;
-}
-sub {
-  vertical-align: sub;
-  font-size: 80%;
 }
 nav {
   position: absolute;
@@ -164,8 +146,6 @@ nav ul li {
   text-decoration: none;
   display: inline-block;
   font-size: 10pt;
-  font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-  font-weight: 300;
 }
 nav ul li a {
   padding: 0px 20px;
@@ -208,7 +188,6 @@ nav ul li.logo {
 }
 #hero h1 {
   font-size: 36pt;
-  font-family: "DINRound-500", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
   font-weight: 500;
   line-height: 150%;
   text-align: center;
@@ -228,6 +207,7 @@ nav ul li.logo {
   background-color: #68c6df;
   background: #68c6df;
   padding: 16px 20px;
+  font-weight: 500;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   -o-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
@@ -245,8 +225,6 @@ nav ul li.logo {
   box-sizing: border-box;
   margin-left: -150px;
   font-size: 12pt;
-  font-family: "DINRound-500", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-  font-weight: 500;
   -webkit-transition: all ease 0.3s;
   -moz-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
@@ -335,15 +313,11 @@ nav ul li.logo {
 #services .row .content h2 {
   color: #202c51;
   font-size: 32pt;
-  font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-  font-weight: 300;
 }
 #services .row .content p {
   position: relative;
   right: 0px;
   font-size: 16pt;
-  font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-  font-weight: 300;
   color: #3f3f3f;
   margin: 30px 0 50px 0;
   line-height: 150%;
@@ -357,12 +331,10 @@ nav ul li.logo {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  padding: 14px 16px 12px 16px;
+  padding: 8px 12px;
   text-decoration: none;
   color: #202c51;
   font-size: 16pt;
-  font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-  font-weight: 300;
   white-space: nowrap;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -398,8 +370,6 @@ div#company {
 div#company p {
   color: #202c51;
   font-size: 20pt;
-  font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-  font-weight: 300;
   line-height: 150%;
 }
 div#company p.knot63 {
@@ -417,12 +387,11 @@ div#company a.cta {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  padding: 18px 20px 16px 20px;
+  padding: 16px 20px;
   text-decoration: none;
   color: white;
-  font-size: 16pt;
-  font-family: "DINRound-500", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
   font-weight: 500;
+  font-size: 16pt;
   white-space: nowrap;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -436,145 +405,6 @@ div#company a.cta:hover {
 /* *********************************************
  * CAREERS
  ********************************************* */
-#careers h2 {
-  color: #202c51;
-  font-size: 32pt;
-  font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-  font-weight: 300;
-  text-align: center;
-  margin: 40px 0;
-}
-#benefits {
-  -webkit-columns: 2;
-  -moz-columns: 2;
-  columns: 2;
-  -webkit-column-gap: 20px;
-  -moz-column-gap: 20px;
-  column-gap: 20px;
-  margin: 40px 0;
-}
-#benefits li {
-  position: relative;
-  margin-bottom: 20px;
-  color: #595959;
-  -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
-  break-inside: avoid;
-  padding-left: 80px;
-  font-size: 14pt;
-  font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-  font-weight: 300;
-  line-height: 18pt;
-  min-height: 64px;
-}
-#benefits li:before {
-  display: block;
-  content: "";
-  background-image: url("../images/benefits.png");
-  width: 64px;
-  height: 64px;
-  display: inline-block;
-  font-size: 64px;
-  background-size: 192px 192px;
-  position: absolute;
-  left: 0;
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
-  #benefits li:before {
-    background-image: url("../images/benefits@2x.png");
-  }
-}
-#benefits li.work:before {
-  background-position: -2em 0em;
-}
-#benefits li.health:before {
-  background-position: 0em 0em;
-}
-#benefits li.salary:before {
-  background-position: -1em 0em;
-}
-#benefits li.vacation:before {
-  background-position: 0em -1em;
-}
-#benefits li.sf:before {
-  background-position: -2em -1em;
-}
-#benefits li.equipment:before {
-  background-position: -1em -1em;
-}
-#benefits li.ego:before {
-  background-position: 0em -2em;
-}
-#benefits li.power:before {
-  background-position: -1em -2em;
-}
-#benefits li strong {
-  font-size: 14pt;
-  font-family: "DINRound-500", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-  font-weight: 500;
-  color: #3f3f3f;
-}
-#jobs {
-  -webkit-columns: 3;
-  -moz-columns: 3;
-  columns: 3;
-  -webkit-column-gap: 20px;
-  -moz-column-gap: 20px;
-  column-gap: 20px;
-  margin: 40px 0 20px 0;
-}
-#jobs li {
-  -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
-  break-inside: avoid;
-  margin-bottom: 20px;
-}
-#jobs li h3 {
-  color: #4b7eb5;
-  font-size: 16pt;
-  font-family: "DINRound-500", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-#jobs li p {
-  margin-bottom: 10px;
-  font-size: 14pt;
-  font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-  font-weight: 300;
-  line-height: 18pt;
-  color: #3f3f3f;
-}
-#jobs li p:last-child {
-  text-align: center;
-}
-#jobs li a.apply {
-  border: 1px solid #202c51;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  padding: 8px 16px 6px 16px;
-  text-align: center;
-  display: inline-block;
-  text-decoration: none;
-  color: #202c51;
-  font-size: 14pt;
-  font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-  font-weight: 300;
-  white-space: nowrap;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-#jobs li a.apply:hover {
-  background: #202c51;
-  color: white;
-}
-#jobs li a.apply.upper {
-  float: right;
-  margin: -5px 0 0 0;
-  display: none;
-}
 blockquote {
   margin: 40px 0;
   text-align: center;
@@ -582,14 +412,10 @@ blockquote {
 blockquote p {
   color: #202c51;
   font-size: 20pt;
-  font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-  font-weight: 300;
   line-height: 150%;
 }
 blockquote p.author {
   font-size: 16pt;
-  font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-  font-weight: 300;
   color: #4b7eb5;
   margin-top: 4px;
 }
@@ -598,26 +424,9 @@ blockquote p.author {
  ********************************************* */
 #copyright {
   font-size: 10pt;
-  font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-  font-weight: 300;
   color: #aaa;
   text-align: center;
   margin: 20px 0;
-}
-/* *********************************************
- * POPUP
- ********************************************* */
-body.popup #everything {
-  -webkit-transform: scale(0.95);
-  -moz-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  -o-transform: scale(0.95);
-  transform: scale(0.95);
-  -webkit-filter: 4px;
-  -moz-filter: 4px;
-  -ms-filter: 4px;
-  -o-filter: 4px;
-  filter: 4px;
 }
 /* *********************************************
  * SMALLER DESKTOP
@@ -626,8 +435,6 @@ body.popup #everything {
   div#company p,
   div#company a.cta {
     font-size: 16pt;
-    font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-    font-weight: 300;
   }
   div#company p.knot63 {
     background-size: 200px 50px;
@@ -638,17 +445,10 @@ body.popup #everything {
   }
   div#services .row .content h2 {
     font-size: 20pt;
-    font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-    font-weight: 300;
   }
   div#services .row .content p,
   div#services .row .content a.cta {
     font-size: 12pt;
-    font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-    font-weight: 300;
-  }
-  div#services .row .content a.cta {
-    padding: 10px 12px 8px 12px;
   }
   div#services .row .content p span {
     max-width: 340px;
@@ -656,37 +456,10 @@ body.popup #everything {
   div#services .row .content p {
     margin: 20px 0 40px 0;
   }
-  #careers h2 {
-    font-size: 20pt;
-    font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-    font-weight: 300;
-  }
-  #jobs li h3 {
-    font-size: 14pt;
-    font-family: "DINRound-500", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-    font-weight: 500;
-  }
-  #jobs li a.apply {
-    font-size: 12pt;
-    font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-    font-weight: 300;
-  }
-  #benefits li,
-  #benefits li strong,
-  #jobs li p {
-    font-size: 12pt;
-    line-height: 16pt;
-  }
 }
-/* *********************************************
- * MOBILE
- ********************************************* */
 @media screen and (max-width: 640px) {
   div#hero h1 {
     font-size: 28pt;
-    font-family: "DINRound-300", "DIN Round Offc Pro", "DIN Round Web Pro", Gotham, Montserrat, Helvetica, Arial, Sans-Serif;
-    font-weight: 300;
-    margin-bottom: 100px;
   }
   .container {
     margin: 0 20px;
@@ -721,7 +494,6 @@ body.popup #everything {
   div#services .row.ux .content p,
   div#services .row.data .content p {
     color: white;
-    margin: 20px 0;
   }
   div#services .row .content a.cta,
   div#services .row.ux .content a.cta,
@@ -735,13 +507,6 @@ body.popup #everything {
     background: rgba(104, 198, 223, 0.8);
     color: white;
   }
-  div#services .row.data .content a.cta {
-    margin-bottom: 40px;
-    display: inline-block;
-  }
-  div#services .row.ux .content h2 {
-    margin-top: 30px;
-  }
   nav {
     border-bottom: none;
   }
@@ -752,17 +517,5 @@ body.popup #everything {
     display: block;
     width: 100%;
     left: 0px;
-  }
-  #benefits,
-  #jobs {
-    -webkit-columns: 1;
-    -moz-columns: 1;
-    columns: 1;
-  }
-  #jobs li a.apply {
-    display: none;
-  }
-  #jobs li a.apply.upper {
-    display: block;
   }
 }
