@@ -166,6 +166,11 @@ nav
     {
     background: @lightlight;
     h2 { color: @grey; }
+    .cta
+        {
+        margin: 20px 0;
+        text-align: center;
+        }
     }
 
 #services ul.services
@@ -403,6 +408,12 @@ nav
         .transition(all .1s ease);
         .translateY(2px);
         .box-shadow(0 2px 4px rgba(0,0,0,.15));
+        }
+    &.blue
+        {
+        .diagonal-gradient (#89C5D1, #90BCD6);
+        border-bottom: 4px solid darken(#90BCD6, 5);
+        color: @light;
         }
     }
 
