@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+    <link href='http://fonts.googleapis.com/css?family=Abel|Open+Sans:300' rel='stylesheet' type='text/css'>
 
         <title>Ooops...</title>
   </head>
@@ -28,8 +29,13 @@
 
     })
 </script>
-<h2 class="error">
-    Sorry, the page <b id="url"></b> could not be found on this server.
-</h2>
+    <div id="hero" class="error">
+      <div id="lights"></div>
+      <div id="turtle"></div>
+        <h2 class="error">
+            Sorry, the page <b id="url"></b> could not be found on this server.
+        </h2>
+    </div>
+
 </body>
 </html>

@@ -19,7 +19,7 @@
 @xl: 24pt;
 
 .regular(@font-size: @m) { font-size: @font-size; font-family: "Open Sans", Times, Arial, Sans-Serif; font-weight: 300; line-height: 135%; }
-.title(@font-size: @m)  { font-size: @font-size; font-family: "Abel", Helvetica, Arial, Sans-Serif;  text-transform: uppercase;}
+.title(@font-size: @m)  { font-size: @font-size; font-family: "Abel", Helvetica, Arial, Sans-Serif;  text-transform: uppercase; line-height: 135%; }
 
 body, html
     {
@@ -130,6 +130,18 @@ nav
 
     }
 
+#hero.error
+    {
+    min-height: 100vh;
+    display: block;
+    box-sizing: border-box;
+    margin: 0; padding: 100px 0 0 0;
+    #turtle {margin: 0px auto; background: url(../images/drunkturtle.png); background-size: 100% 100%; margin-bottom: 0px; }
+    h2 {
+        .title(@xl);
+        margin: 0px 40px;
+    }
+    }
 /* *********************************************
  * TAGLINE
  ********************************************* */
