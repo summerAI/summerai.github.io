@@ -19,16 +19,16 @@
 @xl: 24pt;
 
 .regular(@font-size: @m) { font-size: @font-size; font-family: "Open Sans", Times, Arial, Sans-Serif; font-weight: 300; line-height: 135%; }
-.title(@font-size: @m)  { font-size: @font-size; font-family: "Abel", Helvetica, Arial, Sans-Serif;  text-transform: uppercase;}
+.title(@font-size: @m)  { font-size: @font-size; font-family: "Abel", Helvetica, Arial, Sans-Serif;  text-transform: uppercase; line-height: 135%; }
 
-html
+body, html
     {
     font-size: 62.5%;
     }
 
 body 
     {
-    .regular(10pt);
+    .regular(@s);
     background: @lightlight;
     }
 
@@ -99,6 +99,7 @@ nav
  * HERO
  ********************************************* */
 
+#team, #services, #tagline, #process, #lowercta { padding: 40px 0; }
 
 #hero
     {
@@ -121,14 +122,26 @@ nav
     #turtle
         {
         background: url(../images/turtle.png) top right no-repeat;
-        background-size: 413px 396px;
-        width: 524px;
+        background-size: 100% 100%;
+        width: 424px;
         z-index: 200;
-        height: 396px;
+        height: 411px;
         }
 
     }
 
+#hero.error
+    {
+    min-height: 100vh;
+    display: block;
+    box-sizing: border-box;
+    margin: 0; padding: 100px 0 0 0;
+    #turtle {margin: 0px auto; background: url(../images/drunkturtle.png); background-size: 100% 100%; margin-bottom: 0px; }
+    h2 {
+        .title(@xl);
+        margin: 0px 40px;
+    }
+    }
 /* *********************************************
  * TAGLINE
  ********************************************* */
@@ -151,9 +164,13 @@ nav
 
 #services
     {
-    padding: 40px 0;
     background: @lightlight;
     h2 { color: @grey; }
+    .cta
+        {
+        margin: 20px 0;
+        text-align: center;
+        }
     }
 
 #services ul.services
@@ -215,9 +232,9 @@ nav
         margin-top: 10px;
         #panel {
             .transition(left 1s ease);
-            border: 1px solid red;
             position: absolute;
             left: 0px;
+            margin-left: 210px;
         }
         }
     .detail { 
@@ -240,11 +257,10 @@ nav
             margin-bottom: 12px;
             }
     }
-    .detail1 {left: 210px; .opacity(1); &:after { left: 60px;} }
-    .detail2 {left: 730px; &:after { left: 200px;} }
-    .detail3 {left: 1250px; &:after { left: 390px;} }
-    .detail4 {left: 1770px; &:after { left: 460px;} }
-    padding: 40px 0;
+    .detail1 {left: 0px; .opacity(1); &:after { left: 60px;} }
+    .detail2 {left: 520px; &:after { left: 200px;} }
+    .detail3 {left: 1040px; &:after { left: 390px;} }
+    .detail4 {left: 1560px; &:after { left: 460px;} }
     ul  
         {
         text-align: center;
@@ -261,7 +277,7 @@ nav
             }
         border: 1px solid @light;
         padding: 8px 12px 8px 12px;
-        margin: 0px 4px;
+        margin: 0px 4px 8px 4px;
         text-transform: uppercase;
         color: @light;
         .title(@l);
@@ -288,7 +304,6 @@ nav
 
 #team
     {
-    padding: 40px 0;
     background: @grey;
     h2 { color: @light; }
     .columns
@@ -317,7 +332,6 @@ nav
             &:after
                 {
                 content: "";
-                background: red;
                 width: 100%;
                 height: 20px;
                 border: 2px solid green;
@@ -355,7 +369,6 @@ nav
 #lowercta
     {
     .diagonal-gradient (#85C4D1, #7BA7D7);
-    padding: 40px;
     p
         {
         color: @light;
@@ -395,6 +408,12 @@ nav
         .transition(all .1s ease);
         .translateY(2px);
         .box-shadow(0 2px 4px rgba(0,0,0,.15));
+        }
+    &.blue
+        {
+        .diagonal-gradient (#89C5D1, #90BCD6);
+        border-bottom: 4px solid darken(#90BCD6, 5);
+        color: @light;
         }
     }
 
@@ -448,24 +467,19 @@ body.popup
  ********************************************* */
 
 @media screen and (max-width: 1024px) {
-    div#company
+    .container
         {
-        p, a.cta { .regular(16pt; )}
-        p.knot63 { background-size: 200px 50px; margin: 30px 0 20px 0; }
-        } 
-    div#services .row .content 
-        {
-        .inner { padding: 40px; }
-
-        h2 {.regular(20pt)}
-        p, a.cta {.regular(12pt;)}
-        a.cta { padding: 10px 12px 8px 12px; }
-        p span { max-width: 340px; }
-        p { margin: 20px 0 40px 0; }
+        max-width: 700px;
         }
-    #careers h2 {.regular(20pt)}
-    #jobs li a.apply { .regular(12pt); }
-    #benefits li, #benefits li strong, #jobs li p { font-size: 12pt; line-height: 16pt; }
+    #process #details #panel
+        {
+        margin-left: 80px;
+        background: green;
+        }
+    #tagline {padding: 40px 0;}
+    #process li { .title(@m); }
+    #team .columns {margin: 40px 0 20px 0;}
+    #team .h-card p.n { .title(@m); }
 }
 
 
@@ -473,73 +487,61 @@ body.popup
  * MOBILE
  ********************************************* */
 
+@media all and (max-width: 720px) {
+    .container { margin: 0px 10px; }
+}
 
-@media screen and (max-width: 640px) {
-    div#hero h1
+@media all and (max-width: 640px) {
+    @xs: 8pt;
+    @s: 10pt;
+    @m: 12pt;
+    @l: 14pt;
+    @xl: 20pt;
+    body { .regular(@s); }
+    h2 { .title(@xl); }
+    nav { display: none; }
+    #hero 
         {
-        .regular(28pt);
-        margin-bottom: 100px;
+        min-height: 10px;
+        padding: 40px 0;
+        overflow: hidden;
+        #turtle { .scale(.8); }
         }
-    .container
+    #copyright 
         {
-        margin: 0 20px;
+        width: 100%;
+        margin: 20px auto;
+        &:before { width: 60px; height: 34px; }
         }
-    div#services .knot
+    #tagline p { .regular(@l); } 
+    #services ul.services li p { .regular(@s); }
+    #services ul.services li h3 { .title(@m); }
+    #services ul.services { .columns(1); }
+    #services ul.services li:before {
+        .scale(.666);
+        margin: 0 auto;
+    }
+    #process
         {
-        width: 100px;
-        height: 100px;
-        margin: -50px 0 0 -50px;
-        background-size: 50px 53px;
+        #panel { width: 100%; margin-left: 0px !important; }
+        .detail {width: 100%}
+        .detail1:after { left: 50%;}
+        .detail2:after { left: 50%;}
+        .detail3:after { left: 50%;}
+        .detail4:after { left: 50%;}
         }
-    div#services .row, div#services .row.ux, div#services .row.data
-        {
-        .photo, .content  
-            {
-            width: 100%;
-            left: 0px;
-            }
-        .content
-            {
-            text-align: center;
-            h2  {color: @blue-light;}
-            p  {color: white; margin: 20px 0;}
-            a.cta
-                {
-                color: @blue-light;
-                border-color: @blue-light;
-                &:hover
-                    {
-                    background: fade(@blue-light, 80);
-                    color: white;
-                    }
-                }
-            background: rgba(0,0,0, .5);
-            }
-        }
-    div#services .row.data .content a.cta
-        {
-        margin-bottom: 40px;
-        display: inline-block;
-        }
-    div#services .row.ux .content h2
-        {
-        margin-top: 30px;
-        }
-    nav
-        {
-        border-bottom: none;
-        ul li { display: none; }
-        ul li:first-child 
-            {
-            display: block;
-            width: 100%;
-            left: 0px;
-            }
-        }
-    #benefits, #jobs
-        {
-        .columns(1);
-        }
-    #jobs li a.apply {display: none; }
-    #jobs li a.apply.upper {display: block; }
+    #process .detail {
+        width: 100%;
+    }
+    #process .detail { .regular(@s); }
+    #process li { .title(@l); }
+    #team .columns { .columns(1); }
+    #team .h-card:first-child { margin-bottom: 20px; }
+    #team .h-card a.p-nickname { .regular(@s); }
+    #team .h-card p.p-note { .regular(@s); }
+    #team .h-card p.n { .title(@l); }
+    #lowercta p { .regular(@l); }
+    .button{ .regular(@m); }
+    #copyright { .regular(@xs); }
+    #team, #services, #tagline, #process, #lowercta { padding: 20px 0; }
 }
