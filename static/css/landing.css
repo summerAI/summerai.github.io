@@ -234,23 +234,34 @@ nav ul li:last-child a:active {
   background-image: -o-linear-gradient(-45deg, #a0d1db 0%, #a0bcdb 100%);
   background-image: linear-gradient(135deg, #a0d1db 0%, #a0bcdb 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a0d1db', endColorstr='#a0bcdb', GradientType=1);
-  max-height: 100vh;
-  min-height: 700px;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  align-items: center;
+  padding: 120px 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@-webkit-keyframes lights {
+  0% {
+    background-position: 0px 0px;
+  }
+  30% {
+    background-position: -400px 0px;
+  }
+  50% {
+    background-position: -300px 0px;
+  }
+  85% {
+    background-position: -800px 0px;
+  }
+  100% {
+    background-position: -717px 0px;
+  }
 }
 #hero #lights {
+  -webkit-animation: lights 90s infinite;
   background: url(../images/lights.png) top left repeat-x;
   position: absolute;
   width: 100%;
-  height: 431px;
+  height: 430px;
   left: 0px;
   top: 0px;
   z-index: 0;
@@ -258,6 +269,8 @@ nav ul li:last-child a:active {
 #hero #turtle {
   background: url(../images/turtle.png) top right no-repeat;
   background-size: 100% 100%;
+  margin: 0px auto;
+  position: relative;
   width: 424px;
   z-index: 200;
   height: 411px;
@@ -311,18 +324,16 @@ nav ul li:last-child a:active {
   text-align: center;
 }
 #services ul.services {
-  -webkit-columns: 3;
-  -moz-columns: 3;
-  columns: 3;
-  -webkit-column-gap: 24px;
-  -moz-column-gap: 24px;
-  column-gap: 24px;
   margin-bottom: 20px;
 }
 #services ul.services li {
-  -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
-  break-inside: avoid-column;
+  width: 31%;
+  display: inline-block;
+  margin: 0 2% 0 0;
+  vertical-align: top;
+}
+#services ul.services li:nth-child(3n+0) {
+  margin: 0px;
 }
 #services ul.services li:before {
   content: "";
@@ -531,7 +542,7 @@ nav ul li:last-child a:active {
   clear: both;
 }
 #team .h-card div.right {
-  margin-left: 110px;
+  margin-left: 115px;
 }
 #team .h-card .avatar {
   width: 96px;
@@ -636,6 +647,17 @@ nav ul li:last-child a:active {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.button.blue {
+  background: #3e505b;
+  margin-top: 30px;
+  text-shadow: 0px -1px 0px #34434c;
+  border-bottom: 4px solid #34434c;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  color: #f5f5e6;
+}
 .button:hover {
   -webkit-transform: translateY(-2px);
   -moz-transform: translateY(-2px);
@@ -663,15 +685,17 @@ nav ul li:last-child a:active {
   -o-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
-.button.blue {
-  background: #89c5d1;
-  background-image: -moz-linear-gradient(-45deg, #89c5d1 0%, #90bcd6 100%);
-  background-image: -webkit-linear-gradient(-45deg, #89c5d1 0%, #90bcd6 100%);
-  background-image: -o-linear-gradient(-45deg, #89c5d1 0%, #90bcd6 100%);
-  background-image: linear-gradient(135deg, #89c5d1 0%, #90bcd6 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#89c5d1', endColorstr='#90bcd6', GradientType=1);
-  border-bottom: 4px solid #7db1cf;
-  color: #f5f5e6;
+.button.blue:hover {
+  -webkit-box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+}
+.button.blue:active {
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 /* *********************************************
  * FOOTER
@@ -815,10 +839,9 @@ body.popup #everything {
     text-transform: uppercase;
     line-height: 135%;
   }
-  #services ul.services {
-    -webkit-columns: 1;
-    -moz-columns: 1;
-    columns: 1;
+  #services ul.services li {
+    width: 100%;
+    margin: 0;
   }
   #services ul.services li:before {
     -webkit-transform: scale(0.666);
