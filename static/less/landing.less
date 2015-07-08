@@ -104,17 +104,24 @@ nav
 #hero
     {
     .diagonal-gradient (#A0D1DB, #A0BCDB);
-    max-height: 100vh;
-    min-height: 660px;
-    .display-flex();
-    .justify-content(center);
-    .align-items(center);
+    padding: 120px 0;
+    .border-box-sizing;
+
+    @-webkit-keyframes lights {
+      0%   { background-position: 0px 0px; }
+      30% { background-position: -400px 0px; }
+      50% { background-position: -300px 0px; }
+      85% { background-position: -800px 0px; }
+      100% { background-position: -717px 0px; }
+    }
+
     #lights
         {
+        -webkit-animation: lights 90s infinite;
         background: url(../images/lights.png) top left repeat-x;
         position: absolute;
         width: 100%;
-        height: 431px;
+        height: 430px;
         left: 0px;
         top: 0px;
         z-index: 0;
@@ -123,6 +130,8 @@ nav
         {
         background: url(../images/turtle.png) top right no-repeat;
         background-size: 100% 100%;
+        margin: 0px auto;
+        position: relative;
         width: 424px;
         z-index: 200;
         height: 411px;
@@ -175,14 +184,14 @@ nav
 
 #services ul.services
     {
-    .columns(3);
-    .column-gap(24px);
     margin-bottom: 20px;
     li
         {
-        -webkit-column-break-inside: avoid;
-        page-break-inside: avoid;
-        break-inside: avoid-column; 
+        width: 31%;
+        display: inline-block;
+        margin: 0 2% 0 0;
+        &:nth-child(3n+0) { margin: 0px; }
+        vertical-align: top;
         &:before
             {
             content: "";
@@ -318,7 +327,8 @@ nav
               page-break-inside: avoid;
                    break-inside: avoid;
         .clearfix;
-        div.right { margin-left: 110px;}
+        div.right { margin-left: 115px; }
+
         .avatar
             {
             width: 96px;
@@ -397,6 +407,15 @@ nav
     .regular(@l);
     .border-radius(2px);
     .transition(all .3s ease);
+    &.blue
+        {
+        background: @grey;
+        margin-top: 30px;
+        text-shadow: 0px -1px 0px darken(@grey, 5); 
+        border-bottom: 4px solid darken(@grey, 5);
+        .box-shadow(0 6px 12px rgba(0,0,0,.2));
+        color: @light;
+        }
     &:hover
         {
         .translateY(-2px);
@@ -409,12 +428,8 @@ nav
         .translateY(2px);
         .box-shadow(0 2px 4px rgba(0,0,0,.15));
         }
-    &.blue
-        {
-        .diagonal-gradient (#89C5D1, #90BCD6);
-        border-bottom: 4px solid darken(#90BCD6, 5);
-        color: @light;
-        }
+    &.blue:hover { .box-shadow(0 10px 18px rgba(0,0,0,.2)); }
+    &.blue:active { .box-shadow(0 2px 4px rgba(0,0,0,.15));  } 
     }
 
 /* *********************************************
@@ -516,7 +531,7 @@ body.popup
     #tagline p { .regular(@l); } 
     #services ul.services li p { .regular(@s); }
     #services ul.services li h3 { .title(@m); }
-    #services ul.services { .columns(1); }
+    #services ul.services li { width: 100%; margin: 0; }
     #services ul.services li:before {
         .scale(.666);
         margin: 0 auto;
