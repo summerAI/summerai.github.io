@@ -261,7 +261,7 @@ nav
     #logo
         {
         background: url(../images/logotype.png) top right no-repeat;
-        background-size: 266px 57px;
+        background-size: 100% 100%;
         position: relative; margin: 0px auto;
         width: 266px;
         z-index: 200;
@@ -649,9 +649,11 @@ body.popup
     #hero 
         {
         min-height: 10px;
-        padding: 40px 0;
-        overflow: hidden;
-        #turtle { .scale(.8); }
+        // padding: 40px 0;
+        // overflow: hidden;
+        #bubbles {width: 340px;}
+        #turtle { width: 336px; height: 224px; background-size: 300px 224px; }
+        #logo { width: 213px; height: 46px; }
         }
     #copyright 
         {
