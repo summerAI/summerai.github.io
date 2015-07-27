@@ -885,15 +885,19 @@ body {
   vertical-align: bottom;
   margin: 5px 6px;
   position: relative;
+  -webkit-perspective: 300px;
+  -moz-perspective: 300px;
+  -o-perspective: 300px;
+  perspective: 300px;
 }
 #bookshelf .gr_grid_container .gr_grid_book_container img {
   display: block;
   position: absolute;
   bottom: 0px;
-  -webkit-box-shadow: 0px -3px 10px 1px #29353d;
-  -moz-box-shadow: 0px -3px 10px 1px #29353d;
-  -o-box-shadow: 0px -3px 10px 1px #29353d;
-  box-shadow: 0px -3px 10px 1px #29353d;
+  -webkit-box-shadow: 0px -3px 10px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -3px 10px 1px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0px -3px 10px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px -3px 10px 1px rgba(0, 0, 0, 0.3);
   vertical-align: bottom;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -901,12 +905,51 @@ body {
   transition: all 0.3s ease-in-out;
 }
 #bookshelf .gr_grid_container .gr_grid_book_container:hover img {
-  -webkit-transform: scale(1.3);
-  -moz-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  -o-transform: scale(1.3);
-  transform: scale(1.3);
+  -webkit-transform: scale(1.3) rotateY(-20deg);
+  -moz-transform: scale(1.3) rotateY(-20deg);
+  -ms-transform: scale(1.3) rotateY(-20deg);
+  -o-transform: scale(1.3) rotateY(-20deg);
+  transform: scale(1.3) rotateY(-20deg);
   z-index: 1000;
+  -webkit-box-shadow: 0px 5px 25px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 5px 25px 5px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0px 5px 25px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 25px 5px rgba(0, 0, 0, 0.3);
+}
+#bookshelf .gr_grid_container .gr_grid_book_container:nth-child(5n):hover img {
+  -webkit-transform: scale(1.3) rotateY(15deg);
+  -moz-transform: scale(1.3) rotateY(15deg);
+  -ms-transform: scale(1.3) rotateY(15deg);
+  -o-transform: scale(1.3) rotateY(15deg);
+  transform: scale(1.3) rotateY(15deg);
+}
+#bookshelf .gr_grid_container .gr_grid_book_container:nth-child(5n+1):hover img {
+  -webkit-transform: scale(1.3) rotateY(-5deg);
+  -moz-transform: scale(1.3) rotateY(-5deg);
+  -ms-transform: scale(1.3) rotateY(-5deg);
+  -o-transform: scale(1.3) rotateY(-5deg);
+  transform: scale(1.3) rotateY(-5deg);
+}
+#bookshelf .gr_grid_container .gr_grid_book_container:nth-child(5n+2):hover img {
+  -webkit-transform: scale(1.3) rotateY(20deg);
+  -moz-transform: scale(1.3) rotateY(20deg);
+  -ms-transform: scale(1.3) rotateY(20deg);
+  -o-transform: scale(1.3) rotateY(20deg);
+  transform: scale(1.3) rotateY(20deg);
+}
+#bookshelf .gr_grid_container .gr_grid_book_container:nth-child(5n+3):hover img {
+  -webkit-transform: scale(1.3) rotateY(5deg);
+  -moz-transform: scale(1.3) rotateY(5deg);
+  -ms-transform: scale(1.3) rotateY(5deg);
+  -o-transform: scale(1.3) rotateY(5deg);
+  transform: scale(1.3) rotateY(5deg);
+}
+#bookshelf .gr_grid_container .gr_grid_book_container:nth-child(5n+4):hover img {
+  -webkit-transform: scale(1.3) rotateY(-15deg);
+  -moz-transform: scale(1.3) rotateY(-15deg);
+  -ms-transform: scale(1.3) rotateY(-15deg);
+  -o-transform: scale(1.3) rotateY(-15deg);
+  transform: scale(1.3) rotateY(-15deg);
 }
 #bookshelf a.gr_grid_branding {
   display: none;
