@@ -1,0 +1,47 @@
+nav
+    {
+    position: absolute;
+    top: 20px;
+    height: 80px;
+    width: 100%;
+    ul { text-align: right; margin-right: 20px;}
+    ul li
+        {
+        text-decoration: none;
+        display: inline-block;
+        .title(@s);
+        a
+            {
+            padding: 0px 20px;
+            line-height: 40px;
+            display: inline-block;
+            border: 1px solid transparent;
+            color: white;
+            text-decoration: none;
+            &:hover
+                {
+                border: 1px solid @light;
+                }
+            }
+        }
+    ul li:last-child a
+        {
+        border: 1px solid @light;
+        .border-radius(2px);
+        .transition(all .3s ease);
+        &:hover
+            {
+            background: @lightlight;
+            color: darken(#82BDD2, 5);
+            .translateY(-4px);
+            .box-shadow(0 10px 18px rgba(0,0,0,.15));
+            }
+        &:active
+            {
+            background: light;
+            .transition(all .07s ease-out);
+            .translateY(2px);
+            .box-shadow(0 2px 4px rgba(0,0,0,.15));
+            }
+        }
+    }

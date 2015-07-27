@@ -1,0 +1,54 @@
+
+@blue-dark: #202C51;  // Dark blue
+@blue-medium: #4B7EB5;  // Faded Blue 
+@blue-light: #68C6DF;  // Turquoise blue
+@grey: #3E505B;  // grey
+@greygreen: #346C6F;  // grey
+@light: #F5F5E6;
+@lightlight: #F6F6F2;
+
+@xs: 10pt;
+@s: 12pt;
+@m: 14pt;
+@l: 18pt;
+@xl: 24pt;
+
+.regular(@font-size: @m) { font-size: @font-size; font-family: "Open Sans", Times, Arial, Sans-Serif; font-weight: 300; line-height: 135%; }
+.title(@font-size: @m)  { font-size: @font-size; font-family: "Abel", Helvetica, Arial, Sans-Serif;  text-transform: uppercase; line-height: 135%; }
+
+body, html
+    {
+    font-size: 62.5%;
+    }
+
+body 
+    {
+    .regular(@s);
+    background: @lightlight;
+    }
+
+h2
+    {
+    .title(@xl) !important;
+    margin: 20px 0 40px 0;
+    color: @light;
+    text-align: center;
+    }
+
+h3
+    {
+    .title(@l) !important;
+    margin: 20px 0 40px 0;
+    color: mix(@grey, @light, 50%);
+    text-align: center;
+    }
+
+
+.container
+    {
+    max-width: 920px;
+    margin: 0px auto;
+    padding: 0px 20px;
+    .border-box-sizing;
+    }
+

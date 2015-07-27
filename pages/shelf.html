@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}summer.ai - Bookshelf{% endblock title %}
+{% block style %}bookshelf{% endblock style %}
+{% block content %}
+    <div id="hero">
+      <div id="lights"></div>
+      <a href="index.html"><div id="logo"></div></a>
+    </div>
+  {% include "nav.html" %}
+    <div id="bookshelf">
+      <h2>Our Bookshelf</h2>
+      <h3>Machine Intelligence</h3>
+      <div class="container" id="gr_grid_widget_ds"></div>
+      <h3>Other Non-Fiction</h3>
+      <div class="container" id="gr_grid_widget_nf"></div>
+      <h3>Fiction</h3>
+      <div class="container" id="gr_grid_widget_f"></div>
+
+    </div>
+    {% include "copyright.html" %}
+{% endblock content %}
+{% block scripts %}
+<script src="https://www.goodreads.com/review/grid_widget/45426204?cover_size=medium&hide_link=true&hide_title=true&num_books=20&order=d&shelf=data-science&sort=date_added&widget_id=ds" type="text/javascript" charset="utf-8"></script>
+<script src="https://www.goodreads.com/review/grid_widget/45426204?cover_size=medium&hide_link=true&hide_title=true&num_books=20&order=d&shelf=other-non-fiction&sort=date_added&widget_id=nf" type="text/javascript" charset="utf-8"></script>
+<script src="https://www.goodreads.com/review/grid_widget/45426204?cover_size=medium&hide_link=true&hide_title=true&num_books=20&order=d&shelf=fiction&sort=date_added&widget_id=f" type="text/javascript" charset="utf-8"></script>
+{% endblock scripts %}

@@ -1,36 +1,6 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href='http://fonts.googleapis.com/css?family=Abel|Open+Sans:300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/static/css/landing.css">
-
-  <link rel="shortcut icon" href="http://summer.ai/static/images/favicon.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://summer.ai/static/images/favicon.png" />
-  <title>summer.ai</title>
-  <meta name="description" content="summer.ai is a machine intelligence agency.">
-
-  <meta property="og:title" content="Machine intelligence Strategy"/>
-  <meta property="og:site_name" content="summer.ai"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:image" content="http://summer.ai/static/images/banner.png"/>
-  <meta property="og:url" content="http://summer.ai"/>
-  <meta property="og:description" content="summer.ai is a machine intelligence agency. We help companies make their products and business more intelligent through a comprehensive AI strategy."/>
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="http://summer.ai">
-<meta name="twitter:site" content="@summer__ai">
-<meta name="twitter:title" content="Machine intelligence Strategy">
-<meta name="twitter:description" content="summer.ai is a machine intelligence agency. We help companies make their products and business more intelligent through a comprehensive AI strategy.">
-<meta name="twitter:image:src" content="http://summer.ai/static/images/banner.png">
-  
-  </head>
-
-<body>
-
-
+{% extends "base.html" %}
+{% block title %}summer.ai{% endblock title %}
+{% block content %}
   <div id="everything">
 
     <div id="hero">
@@ -43,16 +13,7 @@
       <div id="turtle"></div>
       <div id="logo"></div>
     </div>
-
-    <nav>
-      <ul>
-        <li><a href="#services" title="Services">Services</a></li>
-        <li><a href="#process" title="Company">Process</a></li>
-        <li><a href="#team" title="Careers">About</a></li>
-        <li><a href="mailto:hello@summer.ai?subject=Let's talk about data!" title="Contact">Contact</a></li>
-      </ul>
-    </nav>  
-
+  {% include "nav.html" %}
   <main>
     <div id="tagline">
       <div class="container">
@@ -178,41 +139,29 @@
       </div>
     </div>
 
-
-    <div id="copyright">
-        <p class="logo">summer<span>.aı</span></p>
-        <p>Copyright &copy; 2015 Knot 6-3 LLC. All rights reserved. <br /> No turtles were harmed in the production of this website.</p>
-    </div>
+  {% include "copyright.html" %}
 
   </main>
   </div>
-  <script>
-    var slide = function(p) {
-      document.getElementById("panel").style.left = (p * - 520) + "px";
-      document.getElementsByClassName("detail1")[0].style.opacity = 0;
-      document.getElementsByClassName("detail2")[0].style.opacity = 0;
-      document.getElementsByClassName("detail3")[0].style.opacity = 0;
-      document.getElementsByClassName("detail4")[0].style.opacity = 0;
-      document.getElementById("tab1").className = "";
-      document.getElementById("tab2").className = "";
-      document.getElementById("tab3").className = "";
-      document.getElementById("tab4").className = "";
-      document.getElementById("tab" + (p+1)).className = "active";
-      document.getElementsByClassName("detail" + (p+1))[0].style.opacity = 1;
-    }
-    document.getElementById("tab1").addEventListener('click', function() { slide(0);} );
-    document.getElementById("tab2").addEventListener('click', function() { slide(1);} );
-    document.getElementById("tab3").addEventListener('click', function() { slide(2);} );
-    document.getElementById("tab4").addEventListener('click', function() { slide(3);} );
-  </script>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-65448596-1', 'auto');
-  ga('send', 'pageview');
-  </script>
-</body>
-</html>
+{% endblock content %}
+{% block scripts %}
+<script>
+  var slide = function(p) {
+    document.getElementById("panel").style.left = (p * - 520) + "px";
+    document.getElementsByClassName("detail1")[0].style.opacity = 0;
+    document.getElementsByClassName("detail2")[0].style.opacity = 0;
+    document.getElementsByClassName("detail3")[0].style.opacity = 0;
+    document.getElementsByClassName("detail4")[0].style.opacity = 0;
+    document.getElementById("tab1").className = "";
+    document.getElementById("tab2").className = "";
+    document.getElementById("tab3").className = "";
+    document.getElementById("tab4").className = "";
+    document.getElementById("tab" + (p+1)).className = "active";
+    document.getElementsByClassName("detail" + (p+1))[0].style.opacity = 1;
+  }
+  document.getElementById("tab1").addEventListener('click', function() { slide(0);} );
+  document.getElementById("tab2").addEventListener('click', function() { slide(1);} );
+  document.getElementById("tab3").addEventListener('click', function() { slide(2);} );
+  document.getElementById("tab4").addEventListener('click', function() { slide(3);} );
+</script>
+{% endblock scripts %}

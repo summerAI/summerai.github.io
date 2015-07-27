@@ -1,18 +1,18 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends "base.html" %}
+{% block title %}summer.ai - Oooops{% endblock title %}
+{% block style %}error{% endblock style %}
+{% block content %}
 
-    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
-    <link rel="stylesheet" href="{% static 'css/landing.css' %}">
-    <link href='http://fonts.googleapis.com/css?family=Abel|Open+Sans:300' rel='stylesheet' type='text/css'>
-
-        <title>Ooops...</title>
-  </head>
-
-<body>
+    <div id="hero" class="error">
+      <div id="lights"></div>
+      <a href="index.html"><div id="turtle"></div></a>
+        <h2 class="error">
+            Sorry, the page <b id="url"></b> could not be found on this server.
+        </h2>
+    {% include "copyright.html" %}
+    </div>
+{% endblock content %}
+{% block scripts %}
 <script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 
 <script type="text/javascript" charset="utf-8">
@@ -29,22 +29,6 @@
 
     })
 </script>
-    <div id="hero" class="error">
-      <div id="lights"></div>
-      <div id="turtle"></div>
-        <h2 class="error">
-            Sorry, the page <b id="url"></b> could not be found on this server.
-        </h2>
-    </div>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-65448596-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+{% endblock scripts %}
 </body>
 </html>
