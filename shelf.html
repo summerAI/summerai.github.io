@@ -23,43 +23,45 @@
 <meta name="twitter:description" content="summer.ai is a machine intelligence agency. We help companies make their products and business more intelligent through a comprehensive AI strategy.">
 <meta name="twitter:image:src" content="http://summer.ai/static/images/banner.png">
 
-	<title>summer.ai - Oooops</title>
-	<link rel="stylesheet" href="/static/css/error.css">
+	<title>summer.ai - Bookshelf</title>
+	<link rel="stylesheet" href="/static/css/bookshelf.css">
 </head>
 <body>
 	
-
-    <div id="hero" class="error">
+    <div id="hero">
       <div id="lights"></div>
-      <a href="index.html"><div id="turtle"></div></a>
-        <h2 class="error">
-            Sorry, the page <b id="url"></b> could not be found on this server.
-        </h2>
+      <a href="index.html"><div id="logo"></div></a>
+    </div>
+  <nav>
+  <ul>
+    <li><a href="index.html#services" title="Services">Services</a></li>
+    <li><a href="index.html#process" title="Company">Process</a></li>
+    <li><a href="index.html#team" title="Careers">About</a></li>
+    <li><a href="mailto:hello@summer.ai?subject=Let's talk about data!" title="Contact">Contact</a></li>
+  </ul>
+</nav>  
+
+    <div id="bookshelf">
+      <h2>Our Bookshelf</h2>
+      <h3>Machine Intelligence</h3>
+      <div class="container" id="gr_grid_widget_ds"></div>
+      <h3>Other Non-Fiction</h3>
+      <div class="container" id="gr_grid_widget_nf"></div>
+      <h3>Fiction</h3>
+      <div class="container" id="gr_grid_widget_f"></div>
+
+    </div>
     <div id="copyright">
     <p class="logo">summer<span>.aı</span></p>
     <p>Copyright &copy; 2015 Knot 6-3 LLC. All rights reserved. <br /> No turtles were harmed in the production of this website.</p>
 </div>
 
-    </div>
 
 
 	
-<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-
-<script type="text/javascript" charset="utf-8">
-    $(document).ready(function() {
-
-        // Add the missing url to the text
-        $("#url").text(window.location.pathname);
-
-        // Fix the css locations dynamically
-        $("head link").each(function() {
-            for (var i=0; i<window.location.pathname.split(/\//g).length-2; i++)
-                $(this).attr("href", "../" + $(this).attr("href"));
-        });
-
-    })
-</script>
+<script src="https://www.goodreads.com/review/grid_widget/45426204?cover_size=medium&hide_link=true&hide_title=true&num_books=20&order=d&shelf=data-science&sort=date_added&widget_id=ds" type="text/javascript" charset="utf-8"></script>
+<script src="https://www.goodreads.com/review/grid_widget/45426204?cover_size=medium&hide_link=true&hide_title=true&num_books=20&order=d&shelf=other-non-fiction&sort=date_added&widget_id=nf" type="text/javascript" charset="utf-8"></script>
+<script src="https://www.goodreads.com/review/grid_widget/45426204?cover_size=medium&hide_link=true&hide_title=true&num_books=20&order=d&shelf=fiction&sort=date_added&widget_id=f" type="text/javascript" charset="utf-8"></script>
 
 
 	<script>

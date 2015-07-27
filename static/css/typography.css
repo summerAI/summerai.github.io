@@ -1,0 +1,20 @@
+body,
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 12pt;
+  font-family: "Open Sans", Times, Arial, Sans-Serif;
+  font-weight: 300;
+  line-height: 135%;
+  background: #f6f6f2;
+}
+h2 {
+  font-size: 24pt;
+  font-family: "Abel", Helvetica, Arial, Sans-Serif;
+  text-transform: uppercase;
+  line-height: 135%;
+  margin: 20px 0 40px 0;
+  color: #f5f5e6;
+  text-align: center;
+}
