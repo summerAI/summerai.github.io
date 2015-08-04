@@ -10,16 +10,15 @@ pip install cactus
 
 ### Muddle :coffee: 
 
-All development is done on the `dev` branch. 
+All development is done on the `summer` branch. 
 
 ```bash
-git checkout dev
+git checkout summer
 cactus serve  # starts local server, reloads on changes
 # Fix typos on pages/index.html
 # Change images in static/images/
 # Cornify style in less/landing.less
-git add --all
-git commit -m "Sparkly stuff" 
+git commit --all -m "Sparkly stuff" 
 git push
 ```
 
