@@ -872,87 +872,91 @@ body {
   text-shadow: 0px -1px 0px #478fa6;
   margin: 20px 0 20px 0;
 }
-#bookshelf .gr_grid_container {
+#bookshelf .shelf {
   background: url(../images/shelf.png) center 0px repeat-y;
-  padding: 5px 0 45px 0;
+  padding: 4px 0 45px 0;
   background-size: 100% 160px;
 }
-#bookshelf .gr_grid_container .gr_grid_book_container {
+#bookshelf .shelf .book {
   display: inline-block;
-  padding: 0;
-  height: 150px;
-  width: 98px;
-  vertical-align: bottom;
-  margin: 5px 6px;
+  width: 100px;
+  height: 156px;
+  margin: 0 6px;
   position: relative;
   -webkit-perspective: 300px;
   -moz-perspective: 300px;
   -o-perspective: 300px;
   perspective: 300px;
-}
-#bookshelf .gr_grid_container .gr_grid_book_container img {
-  display: block;
-  position: absolute;
-  bottom: 0px;
-  -webkit-box-shadow: 0px -3px 10px 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px -3px 10px 1px rgba(0, 0, 0, 0.3);
-  -o-box-shadow: 0px -3px 10px 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px -3px 10px 1px rgba(0, 0, 0, 0.3);
-  vertical-align: bottom;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-#bookshelf .gr_grid_container .gr_grid_book_container:hover img {
-  -webkit-transform: scale(1.3) rotateY(-20deg);
-  -moz-transform: scale(1.3) rotateY(-20deg);
-  -ms-transform: scale(1.3) rotateY(-20deg);
-  -o-transform: scale(1.3) rotateY(-20deg);
-  transform: scale(1.3) rotateY(-20deg);
+#bookshelf .shelf .book:hover {
+  -webkit-transform: scale(1.4) rotateY(-20deg);
+  -moz-transform: scale(1.4) rotateY(-20deg);
+  -ms-transform: scale(1.4) rotateY(-20deg);
+  -o-transform: scale(1.4) rotateY(-20deg);
+  transform: scale(1.4) rotateY(-20deg);
   z-index: 1000;
+}
+#bookshelf .shelf .book:hover a {
   -webkit-box-shadow: 0px 5px 25px 5px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 5px 25px 5px rgba(0, 0, 0, 0.3);
   -o-box-shadow: 0px 5px 25px 5px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 5px 25px 5px rgba(0, 0, 0, 0.3);
 }
-#bookshelf .gr_grid_container .gr_grid_book_container:nth-child(5n):hover img {
-  -webkit-transform: scale(1.3) rotateY(15deg);
-  -moz-transform: scale(1.3) rotateY(15deg);
-  -ms-transform: scale(1.3) rotateY(15deg);
-  -o-transform: scale(1.3) rotateY(15deg);
-  transform: scale(1.3) rotateY(15deg);
+#bookshelf .shelf .book:nth-child(5n):hover {
+  -webkit-transform: scale(1.4) rotateY(15deg);
+  -moz-transform: scale(1.4) rotateY(15deg);
+  -ms-transform: scale(1.4) rotateY(15deg);
+  -o-transform: scale(1.4) rotateY(15deg);
+  transform: scale(1.4) rotateY(15deg);
 }
-#bookshelf .gr_grid_container .gr_grid_book_container:nth-child(5n+1):hover img {
-  -webkit-transform: scale(1.3) rotateY(-5deg);
-  -moz-transform: scale(1.3) rotateY(-5deg);
-  -ms-transform: scale(1.3) rotateY(-5deg);
-  -o-transform: scale(1.3) rotateY(-5deg);
-  transform: scale(1.3) rotateY(-5deg);
+#bookshelf .shelf .book:nth-child(5n+1):hover {
+  -webkit-transform: scale(1.4) rotateY(-5deg);
+  -moz-transform: scale(1.4) rotateY(-5deg);
+  -ms-transform: scale(1.4) rotateY(-5deg);
+  -o-transform: scale(1.4) rotateY(-5deg);
+  transform: scale(1.4) rotateY(-5deg);
 }
-#bookshelf .gr_grid_container .gr_grid_book_container:nth-child(5n+2):hover img {
-  -webkit-transform: scale(1.3) rotateY(20deg);
-  -moz-transform: scale(1.3) rotateY(20deg);
-  -ms-transform: scale(1.3) rotateY(20deg);
-  -o-transform: scale(1.3) rotateY(20deg);
-  transform: scale(1.3) rotateY(20deg);
+#bookshelf .shelf .book:nth-child(5n+2):hover {
+  -webkit-transform: scale(1.4) rotateY(20deg);
+  -moz-transform: scale(1.4) rotateY(20deg);
+  -ms-transform: scale(1.4) rotateY(20deg);
+  -o-transform: scale(1.4) rotateY(20deg);
+  transform: scale(1.4) rotateY(20deg);
 }
-#bookshelf .gr_grid_container .gr_grid_book_container:nth-child(5n+3):hover img {
-  -webkit-transform: scale(1.3) rotateY(5deg);
-  -moz-transform: scale(1.3) rotateY(5deg);
-  -ms-transform: scale(1.3) rotateY(5deg);
-  -o-transform: scale(1.3) rotateY(5deg);
-  transform: scale(1.3) rotateY(5deg);
+#bookshelf .shelf .book:nth-child(5n+3):hover {
+  -webkit-transform: scale(1.4) rotateY(5deg);
+  -moz-transform: scale(1.4) rotateY(5deg);
+  -ms-transform: scale(1.4) rotateY(5deg);
+  -o-transform: scale(1.4) rotateY(5deg);
+  transform: scale(1.4) rotateY(5deg);
 }
-#bookshelf .gr_grid_container .gr_grid_book_container:nth-child(5n+4):hover img {
-  -webkit-transform: scale(1.3) rotateY(-15deg);
-  -moz-transform: scale(1.3) rotateY(-15deg);
-  -ms-transform: scale(1.3) rotateY(-15deg);
-  -o-transform: scale(1.3) rotateY(-15deg);
-  transform: scale(1.3) rotateY(-15deg);
+#bookshelf .shelf .book:nth-child(5n+4):hover {
+  -webkit-transform: scale(1.4) rotateY(-15deg);
+  -moz-transform: scale(1.4) rotateY(-15deg);
+  -ms-transform: scale(1.4) rotateY(-15deg);
+  -o-transform: scale(1.4) rotateY(-15deg);
+  transform: scale(1.4) rotateY(-15deg);
 }
-#bookshelf a.gr_grid_branding {
-  display: none;
+#bookshelf .book a {
+  position: absolute;
+  display: block;
+  background-size: 100% 100%;
+  line-height: 110px;
+  bottom: 0px;
+  height: 150px;
+  width: 100px;
+  -webkit-box-shadow: 0px -3px 10px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -3px 10px 1px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0px -3px 10px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px -3px 10px 1px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 @media screen and (max-width: 1024px) {
   .container {
