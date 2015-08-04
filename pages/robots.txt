@@ -1,6 +1,6 @@
 {% verbatim %}
 User-agent: *
-Disallow:
+Disallow: /books/
 
 Sitemap: sitemap.xml
 {% endverbatim %}

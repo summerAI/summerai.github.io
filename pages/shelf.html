@@ -10,17 +10,27 @@
     <div id="bookshelf">
       <h2>Our Bookshelf</h2>
       <h3>Machine Intelligence</h3>
-      <div class="container" id="gr_grid_widget_ds"></div>
+      <div class="shelf">
+      {% for book in books.datascience %}
+        <div class="book"><a href="{{ book.url }}" title="{{ book.title }}" style="background-image: url({{ book.cover}}); height: {{ book.aspect_ratio }}px;"></a>
+        </div>
+      {% endfor %}
+      </div>
+
       <h3>Other Non-Fiction</h3>
-      <div class="container" id="gr_grid_widget_nf"></div>
+      <div class="shelf">
+      {% for book in books.nonfiction %}
+        <div class="book"><a href="{{ book.url }}" title="{{ book.title }}" style="background-image: url({{ book.cover}}); height: {{ book.aspect_ratio }}px;"></a></div>
+      {% endfor %}
+      </div>
       <h3>Fiction</h3>
-      <div class="container" id="gr_grid_widget_f"></div>
+      <div class="shelf">
+      {% for book in books.fiction %}
+        <div class="book"><a href="{{ book.url }}" title="{{ book.title }}" style="background-image: url({{ book.cover}}); height: {{ book.aspect_ratio }}px;"></a></div>
+      {% endfor %}
+      </div>
 
     </div>
     {% include "copyright.html" %}
 {% endblock content %}
-{% block scripts %}
-<script src="https://www.goodreads.com/review/grid_widget/45426204?cover_size=medium&hide_link=&hide_title=true&num_books=20&order=d&shelf=data-science&sort=date_added&widget_id=ds" type="text/javascript" charset="utf-8"></script>
-<script src="https://www.goodreads.com/review/grid_widget/45426204?cover_size=medium&hide_link=&hide_title=true&num_books=20&order=d&shelf=other-non-fiction&sort=date_added&widget_id=nf" type="text/javascript" charset="utf-8"></script>
-<script src="https://www.goodreads.com/review/grid_widget/45426204?cover_size=medium&hide_link=&hide_title=true&num_books=20&order=d&shelf=fiction&sort=date_added&widget_id=f" type="text/javascript" charset="utf-8"></script>
-{% endblock scripts %}
+
