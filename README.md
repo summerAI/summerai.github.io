@@ -10,10 +10,8 @@ pip install cactus
 
 ### Muddle :coffee: 
 
-All development is done on the `dev` branch. 
-
 ```bash
-git checkout dev
+git pull
 cactus serve  # starts local server, reloads on changes
 # Fix typos on pages/index.html
 # Change images in static/images/
@@ -26,9 +24,10 @@ git push
 ###  Ship :rocket:
 
 ```bash
-git checkout master
-make  # Goes to dev branch, builds, copies build to master and auto-pushes
+cactus deploy
 ```
+
+You'll need the secret access key which you'll find in company 1Password chain, under "server"s.
 
 ###  Adding Books:
 
