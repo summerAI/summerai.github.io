@@ -1,1 +1,6 @@
-{"port":9999}
+{
+    "aws-access-key": "AKIAILBIBUM35B6MWHJQ",
+    "aws-bucket-name": "summerai-www",
+    "aws-bucket-website": "summerai-www.s3-website-us-east-1.amazonaws.com",
+    "port": 9999
+}
