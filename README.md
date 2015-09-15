@@ -8,6 +8,8 @@ npm install less -g
 pip install cactus
 ```
 
+If you're a consolophobe, you can also download [Cactus For Mac](http://cactusformac.com).
+
 ### Muddle :coffee: 
 
 ```bash

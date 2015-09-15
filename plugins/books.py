@@ -7,7 +7,6 @@ POSTS = []
 
 def preBuild(site):
     global POSTS
-    print "BUILDING BOOKS"
     # Build all the posts
     for page in site.pages():
         if page.path.startswith(BOOK_PATH):
