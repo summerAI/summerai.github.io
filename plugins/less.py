@@ -1,6 +1,6 @@
 import subprocess
 
-OUTPUT = ("error", "landing", "bookshelf")
+OUTPUT = ("error", "landing", "bookshelf", "marketing")
 
 
 def postBuild(site):
