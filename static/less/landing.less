@@ -64,6 +64,7 @@
             .title(@m);
             color: @grey;
             margin-bottom: 8px;
+            &.short {padding: .7em;}
             }
         p 
             {
@@ -181,7 +182,7 @@
             {
             .title(@l);
             color: @light;
-            .p-job-title {color: lighten(@grey, 30); }
+            .p-job-title {color: lighten(@grey, 30); display: none;}
             }
         p.p-org, p.p-key {display: none;}
         a.p-nickname

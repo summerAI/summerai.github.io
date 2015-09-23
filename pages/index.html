@@ -27,65 +27,21 @@
       <div class="container">
         <h2>Our Expertise</h2>
         <ul class="services">
+          <li class="prediction">
+            <h3>Analytics &amp; Business Intelligence</h3>
+            <p>Leverage your data to understand your customers and sales funnels. Predicting lifetime value, retention rate, or purchasing patterns can help your business capture opportunities as they arise.</p>
+          </li>
           <li class="nlp">
             <h3>Natural Language Processing</h3>
             <p>News, emails, customer feedback - text is how people communicate. We help you work with unstructured data using methods like topic modeling, sentiment analysis, document labeling.</p>
           </li>
-          <li class="prediction">
-            <h3>Prediction &amp; Optimization</h3>
-            <p>Predicting lifetime value, retention rate, or purchasing patterns can help your business capture opportunities as they arise.</p>
-          </li>
-          <li class="recommendation">
-            <h3>Recommender Systems</h3>
-            <p>Exposing users to the right kind of content is the single strongest drive in engagement. Recommendation engines help you find that content.</p>
-          </li>
-          <li class="acquisition">
-            <h3>Data Acquisition</h3>
-            <p>"There ain't no data like more data" - we help you define and set up data acquisition, pipelining, and warehousing so you won't have any unpleasant surprises down the road.</p>
-          </li>
           <li class="classification">
-            <h3>Labeling &amp; Classification</h3>
-            <p>Turning data into actionable insights often requires reducing it to simple categories.</p>
-          </li>
-          <li class="growth">
-            <h3>Growth Strategy</h3>
-            <p>Building a Data Science team from scratch can be daunting. We help you project future needs, define roles, and facilitate technical interviews.</p>
+            <h3 class="short">Machine Learning</h3>
+            <p>Turn your data into actionable insights. Use machine intelligence techniques tailored to your needs to automate processes, analyze and predict risks, and streamline your data pipeline.</p>
           </li>
         </ul>
         <div class="cta">
           <a href="mailto:hello@summer.ai?subject=Let's talk about data!" class="button blue">Learn what we can do for you</a>
-        </div>
-      </div>
-    </div>
-
-    <div id="process">
-      <div class="container">
-        <h2>The Process</h2>
-        <ul class="process">
-          <li id="tab1" class="active">Opportunity Analysis</li>
-          <li id="tab2">Prototyping</li>
-          <li id="tab3">Integration</li>
-          <li id="tab4">Strategy</li>
-        </ul>
-        <div id="details">
-          <div id="panel">
-          <div class="detail detail1">
-              <p>Based on your product needs, we identify opportunities for Machine Intelligence within your existing data. We help your product team understand the potential and limitations of Machine Intelligence.</p> 
-            </div>
-          <div class="detail detail2">
-              <p>After identifying opportunities, we use lean prototyping to determine what’s possible and achievable.</p> 
-              <p>We answer questions of whether the amount and type of data is sufficient, what the lower and upper performance bounds for an in-house solution will be, what results will look like and what the user experience can be.</p>
-              <p>We build and test several solutions to present the best options available and help product teams understand the potential and limitations of machine intelligence.</p>
-            </div>
-          <div class="detail detail3">
-              <p>We make Machine Intelligence part of your company's core competence. You own the important product decisions while we assist your engineering team in building production systems in- house. We ensure that your Machine Intelligence solutions are understandable and maintainable for the future.</p>
-            </div>
-          <div class="detail detail4">
-              <p>Machine Intelligence teams thrive on strong structure, process, and skill set definition. We teach industry-leading process such as A/B testing, model version management, product science, data acquisition techniques, feature estimation, and hiring practices.</p>
-              <p>We also offer team advisory retainers for further strategy.</p>
-            </div>
-            </div>
-
         </div>
       </div>
     </div>
@@ -144,24 +100,3 @@
   </main>
   </div>
 {% endblock content %}
-{% block scripts %}
-<script>
-  var slide = function(p) {
-    document.getElementById("panel").style.left = (p * - 520) + "px";
-    document.getElementsByClassName("detail1")[0].style.opacity = 0;
-    document.getElementsByClassName("detail2")[0].style.opacity = 0;
-    document.getElementsByClassName("detail3")[0].style.opacity = 0;
-    document.getElementsByClassName("detail4")[0].style.opacity = 0;
-    document.getElementById("tab1").className = "";
-    document.getElementById("tab2").className = "";
-    document.getElementById("tab3").className = "";
-    document.getElementById("tab4").className = "";
-    document.getElementById("tab" + (p+1)).className = "active";
-    document.getElementsByClassName("detail" + (p+1))[0].style.opacity = 1;
-  }
-  document.getElementById("tab1").addEventListener('click', function() { slide(0);} );
-  document.getElementById("tab2").addEventListener('click', function() { slide(1);} );
-  document.getElementById("tab3").addEventListener('click', function() { slide(2);} );
-  document.getElementById("tab4").addEventListener('click', function() { slide(3);} );
-</script>
-{% endblock scripts %}
