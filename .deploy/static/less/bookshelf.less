@@ -1,0 +1,66 @@
+@import "3L";
+@import "typography";
+@import "copyright";
+@import "nav";
+@import "hero";
+
+.reset();
+
+#hero
+    {
+    background: none;
+    padding: 120px 0 0 0;
+    }
+body {
+    .diagonal-gradient (#85C4D1, #7BA7D7);
+}
+#bookshelf
+    {
+    padding: 80px 0 40px 0px;
+    text-align: center;
+    h3 {
+        color: darken(#75B1C4, 5);
+        text-shadow: 0px -1px 0px darken(#75B1C4, 15);
+        margin: 20px 0 20px 0;
+    }
+    .shelf 
+        {
+        background: url(../images/shelf.png) center 0px repeat-y;
+        padding: 4px 0 45px 0;
+        background-size: 100% 160px;
+        .book {
+            display: inline-block;
+            width: 100px;
+            height: 156px;
+            margin: 0 6px;
+            position: relative;
+            .perspective(300px);
+            .transition(all .3s ease-in-out);
+            &:hover
+                {
+                .transform(scale(1.4), rotateY(-20deg));
+                z-index: 1000;
+                a {.box-shadow(0px 5px 25px 5px rgba(0,0,0,.3));}
+                }
+            &:nth-child(5n):hover {.transform(scale(1.4), rotateY(15deg));}
+            &:nth-child(5n+1):hover {.transform(scale(1.4), rotateY(-5deg));}
+            &:nth-child(5n+2):hover {.transform(scale(1.4), rotateY(20deg));}
+            &:nth-child(5n+3):hover {.transform(scale(1.4), rotateY(5deg));}
+            &:nth-child(5n+4):hover {.transform(scale(1.4), rotateY(-15deg));}
+            }
+        }
+        .book a
+            {
+            position: absolute;
+            display: block;
+            background-size: 100% 100%;
+            line-height: 110px;
+            bottom: 0px;
+            height: 150px;
+            width: 100px;
+            .box-shadow(0px -3px 10px 1px rgba(0,0,0,.3));
+            .transition(all .3s ease-in-out);
+        }
+    }
+
+@import "mobile";

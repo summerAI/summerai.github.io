@@ -1,0 +1,25 @@
+@import "3L";
+@import "typography";
+@import "hero";
+@import "copyright";
+
+.reset();
+
+#hero.error
+    {
+    min-height: 100vh;
+    display: block;
+    box-sizing: border-box;
+    margin: 0; padding: 100px 0 0 0;
+    #turtle {margin: 0px auto; background: url(../images/drunkturtle.png); background-size: 100% 100%;width: 424px; height: 318px; margin-bottom: 0px; }
+    h2 {
+        .title(@xl);
+        margin: 0px 40px;
+    }
+    #copyright
+        {
+        color: fade(@light, 70);
+        }
+    }
+
+@import "mobile";
