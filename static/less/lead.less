@@ -1,0 +1,73 @@
+form.lead
+    {
+    h3
+        {
+        .title(@l);
+        color: @grey;
+        margin-top: 20px;
+        }
+    p.ok
+        {
+        .regular(@m);
+        background: #6bba8c;
+        color: @lightlight;
+        .border-radius(4px);
+        text-align: center;
+        &.error { background: #aa5562; }
+        }
+    input[type=submit]
+        {
+        border: none;
+        .button();
+        .button.blue;
+        }
+    input, input[type=submit], .ok
+        {
+        width: 380px;
+        max-width: 100%;
+        .border-box-sizing;
+        display: block;
+        padding: 8px 12px;
+        .regular(@m);
+        margin: 8px auto;
+        outline: none;
+        }
+    input[type=text]
+        {
+        &.error 
+            {
+            border-color: #ba3f50;
+            .box-shadow(inset 0px 0px 0px 2px #ed9ba4);
+            }
+        &:focus
+            {
+            border-color: @blue-medium;
+            }
+        border: 1px solid darken(desaturate(@light, 50), 20);
+    }
+    p.small { .regular(@s); color: lighten(@grey, 25%); margin-top: 10px; text-align: center}
+    }
+.cta .or 
+    {
+    width: 380px;
+    max-width: 100%;
+    .title(@s);
+    text-align: center;
+    margin: 20px auto -10px auto;
+    position: relative;
+    color: lighten(@grey, 25%);
+    &:after, &:before
+        {
+        display: block;
+        content: "";
+        width: 170px;
+        max-width: 45%;
+        // padding-right: 40px;
+        // .border-box-sizing;
+        background: lighten(@grey, 25%);
+        position: absolute;
+        bottom: 50%;
+        height: 1px;
+        }
+    &:after {right: 0px;}
+    }
