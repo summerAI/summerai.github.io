@@ -8,6 +8,7 @@
     padding: 12px 28px 8px 28px;
     color: darken(#82BDD2, 5);
     text-decoration: none;
+    cursor: pointer;
     text-shadow: 0px -1px darken(#82BDD2, 20);
     border-bottom: 4px solid #eee;
     .box-shadow(0 6px 12px rgba(0,0,0,.1));
@@ -37,5 +38,14 @@
         }
     &.blue:hover { .box-shadow(0 10px 18px rgba(0,0,0,.2)); }
     &.blue:active { .box-shadow(0 2px 4px rgba(0,0,0,.15));  } 
+    &.small
+        {
+        .border-box-sizing;
+        display: block;
+        padding: 8px 12px;
+        .regular(@m);
+        margin: 8px auto;
+        outline: none;
+        }
     }
 .button { .button(); }

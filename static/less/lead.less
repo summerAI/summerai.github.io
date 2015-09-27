@@ -1,10 +1,10 @@
 form.lead
     {
-    h3
+    h2
         {
-        .title(@l);
-        color: @grey;
-        margin-top: 20px;
+        .title(@xl);
+        color: @lightlight;
+        margin-top: 40px;
         }
     p.ok
         {
@@ -19,10 +19,11 @@ form.lead
         {
         border: none;
         .button();
-        .button.blue;
+        .button.small;
         }
     input, input[type=submit], .ok
         {
+        background: @lightlight;
         width: 380px;
         max-width: 100%;
         .border-box-sizing;
@@ -43,11 +44,19 @@ form.lead
             {
             border-color: @blue-medium;
             }
-        border: 1px solid darken(desaturate(@light, 50), 20);
+        border: 1px solid #5c94b5;
     }
-    p.small { .regular(@s); color: lighten(@grey, 25%); margin-top: 10px; text-align: center}
+    p.small { .regular(@s) !important; color: lighten(@grey, 25%); margin-top: 10px; text-align: center}
     }
-.cta .or 
+.cta.lead
+    {
+    width: 380px;
+    max-width: 100%;
+    text-align: center;
+    margin: 0px auto 40px auto;
+    a { width: 100%; .button.small; margin-top: 30px;}
+    }
+.cta.lead .or 
     {
     width: 380px;
     max-width: 100%;
@@ -55,7 +64,7 @@ form.lead
     text-align: center;
     margin: 20px auto -10px auto;
     position: relative;
-    color: lighten(@grey, 25%);
+    color: @light;
     &:after, &:before
         {
         display: block;
@@ -64,10 +73,23 @@ form.lead
         max-width: 45%;
         // padding-right: 40px;
         // .border-box-sizing;
-        background: lighten(@grey, 25%);
+        background: @light;
         position: absolute;
         bottom: 50%;
         height: 1px;
         }
     &:after {right: 0px;}
+    }
+
+form.lead.blue 
+    {
+    h2 {color: @grey;}
+    input[type=submit] {.button.blue;}
+    input[type=text] { border: 1px solid darken(desaturate(@light, 50), 20); }
+
+    }
+.cta.lead.blue .or
+    {
+    &:after, &:before {background: lighten(@grey, 25%);}
+    color: lighten(@grey, 25%);
     }
