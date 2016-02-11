@@ -7,7 +7,7 @@ body {
   font-family: "Open Sans", Times, Arial, Sans-Serif;
   font-weight: 300;
   line-height: 135%;
-  background: #f6f6f2;
+  background: #F6F6F2;
 }
 h2 {
   font-size: 24pt !important;
@@ -15,7 +15,7 @@ h2 {
   text-transform: uppercase !important;
   line-height: 135% !important;
   margin: 20px 0 40px 0;
-  color: #f5f5e6;
+  color: #F5F5E6;
   text-align: center;
 }
 h3 {
@@ -94,10 +94,10 @@ nav ul li a {
   text-decoration: none;
 }
 nav ul li a:hover {
-  border: 1px solid #f5f5e6;
+  border: 1px solid #F5F5E6;
 }
 nav ul li:last-child a {
-  border: 1px solid #f5f5e6;
+  border: 1px solid #F5F5E6;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -107,7 +107,7 @@ nav ul li:last-child a {
   transition: all 0.3s ease;
 }
 nav ul li:last-child a:hover {
-  background: #f6f6f2;
+  background: #F6F6F2;
   color: #6fb3cb;
   -webkit-transform: translateY(-4px);
   -moz-transform: translateY(-4px);
@@ -143,12 +143,12 @@ nav ul li:last-child a:active {
   padding: 40px 0;
 }
 #hero {
-  background: #a0d1db;
-  background-image: -moz-linear-gradient(-45deg, #a0d1db 0%, #a0bcdb 100%);
-  background-image: -webkit-linear-gradient(-45deg, #a0d1db 0%, #a0bcdb 100%);
-  background-image: -o-linear-gradient(-45deg, #a0d1db 0%, #a0bcdb 100%);
-  background-image: linear-gradient(135deg, #a0d1db 0%, #a0bcdb 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a0d1db', endColorstr='#a0bcdb', GradientType=1);
+  background: #A0D1DB;
+  background-image: -moz-linear-gradient(-45deg, #A0D1DB 0%, #A0BCDB 100%);
+  background-image: -webkit-linear-gradient(-45deg, #A0D1DB 0%, #A0BCDB 100%);
+  background-image: -o-linear-gradient(-45deg, #A0D1DB 0%, #A0BCDB 100%);
+  background-image: linear-gradient(135deg, #A0D1DB 0%, #A0BCDB 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A0D1DB', endColorstr='#A0BCDB', GradientType=1);
   padding: 180px 0 140px 0;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -856,12 +856,12 @@ table {
   padding: 120px 0 0 0;
 }
 body {
-  background: #85c4d1;
-  background-image: -moz-linear-gradient(-45deg, #85c4d1 0%, #7ba7d7 100%);
-  background-image: -webkit-linear-gradient(-45deg, #85c4d1 0%, #7ba7d7 100%);
-  background-image: -o-linear-gradient(-45deg, #85c4d1 0%, #7ba7d7 100%);
-  background-image: linear-gradient(135deg, #85c4d1 0%, #7ba7d7 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#85c4d1', endColorstr='#7ba7d7', GradientType=1);
+  background: #85C4D1;
+  background-image: -moz-linear-gradient(-45deg, #85C4D1 0%, #7BA7D7 100%);
+  background-image: -webkit-linear-gradient(-45deg, #85C4D1 0%, #7BA7D7 100%);
+  background-image: -o-linear-gradient(-45deg, #85C4D1 0%, #7BA7D7 100%);
+  background-image: linear-gradient(135deg, #85C4D1 0%, #7BA7D7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#85C4D1', endColorstr='#7BA7D7', GradientType=1);
 }
 #bookshelf {
   padding: 80px 0 40px 0px;
