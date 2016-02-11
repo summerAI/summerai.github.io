@@ -24,7 +24,7 @@ $("#leadform").on("submit", function(event) {
           'from_email': 'inbound@summer.ai',
           'to': [
             {
-              'email': 'hello@summer.ai',
+              'email': 'manuel@summer.ai',
               'name': 'summer.ai',
               'type': 'to'
             }
